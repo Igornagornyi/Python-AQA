@@ -30,4 +30,4 @@ for i in titles:
     response_list_text.append(i.a['title'])
 for key, value in zip(response_dict, response_list_text):
     response_dict[key] = response_dict[key] + " " + value
-x = 0
+
