@@ -32,16 +32,9 @@ response_list_text_result = []
 page_content = BeautifulSoup(response.content, "lxml")
 titles = page_content.find_all(class_="portal-grid__cell ng-star-inserted")
 for i in titles:
-<<<<<<< HEAD
     response_list_text.append(i.text)
 for i in response_list_text:
     val = re.findall(r'[А-я]+[^А-Я]+', i)
     response_list_text_result.append(val[1:len(val)+1])
 resp_list_prefull = list(zip(response_list_url, response_list_text_result))
 resonse_dict_full = dict(zip(response_list_title, resp_list_prefull))
-=======
-    response_list_text.append(i.a['title'])
-for key, value in zip(response_dict, response_list_text):
-    response_dict[key] = response_dict[key] + " " + value
-
->>>>>>> 5d6666b27ba908abe8fd685be964ca5ef9353811
