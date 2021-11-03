@@ -29,12 +29,13 @@ print(response_dict)
 #3
 response_list_text = []
 response_list_text_result = []
-page_content = BeautifulSoup(response.content, "lxml")
+page_content = BeautifulSoup(response.content, "html.parser")
 titles = page_content.find_all(class_="portal-grid__cell ng-star-inserted")
 for i in titles:
     response_list_text.append(i.text)
 for i in response_list_text:
     val = re.findall(r'[А-Я]+[^А-Я]+', i)
     response_list_text_result.append(val[1:len(val)+1])
-resp_list_prefull = list(zip(response_list_url, response_list_text_result))
-resonse_dict_full = dict(zip(response_list_title, resp_list_prefull))
+resp_list_full = list(zip(response_list_url, response_list_text_result))
+resonse_dict_full = dict(zip(response_list_title, resp_list_full))
+print(resonse_dict_full)
