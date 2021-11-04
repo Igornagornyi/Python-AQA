@@ -21,7 +21,7 @@ with open('rozetka.html', encoding='utf-8') as f:
             if section_data:
                 sections_dict.setdefault(section_found.groups()[0], tuple(section_data))
             section_data.clear()
-
+v = 0
 
 with open('files.txt', 'w') as f:
     for k, v in sections_dict.items():
