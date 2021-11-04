@@ -7,7 +7,7 @@ url = 'https://rozetka.com.ua/ua/sport-i-uvlecheniya'
 def get_section_titles_href_from_rozetka(url):
     response = requests.get(url)
     page_content = BeautifulSoup(response.content, "html.parser")
-    html_text = page_content.find_all(class_="portal-grid__cell ng-star-inserted")
+    html_text = page_content.find_all(class_="tile-cats__list ng-star-inserted")
     return html_text
 x = get_section_titles_href_from_rozetka(url)
 
@@ -20,7 +20,6 @@ def get_titles_list(url):
 
 r = get_titles_list(url=url)
 
-
 def get_href_list(url):
     response_list_url = []
     html_href = get_section_titles_href_from_rozetka(url)
@@ -30,6 +29,16 @@ def get_href_list(url):
 
 z = get_href_list(url)
 
+def get_subtitle_href(url):
+    response_list_url = []
+    response = requests.get(url)
+    page_content = BeautifulSoup(response.content, "html.parser")
+    html_text = page_content.find_all(class_="tile-cats__item ng-star-inserted")
+    for i in html_text:
+        response_list_url.append(i.a['href'])
+    return response_list_url
+
+uu = get_subtitle_href(url)
 
 def get_titles_and_href_dict(url):
     new_url_list = []
