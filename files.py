@@ -29,7 +29,7 @@ def get_section_found():
 er = get_section_found()
 print(er)
 
-    #Запись информации разделов розетка в список
+    #Создание списка
 def get_section_data():
     if get_section_found():
         section_data = []
@@ -66,12 +66,9 @@ def write_file():
                         f.writelines(i[1].ljust(50, '.'))
                         f.writelines(i[0].rjust(50))
                         f.writelines('\n')
-    #Запись информации по разделам, подразделам и url в файл
-
 
 
 if __name__ == '__main__':
     write_file()
 
 write_file()
-v = 0
