@@ -8,6 +8,4 @@ def get_square_data(a:int)->tuple[int]:
 
     return (area_square, perimetr, float(f'{diagonal:.3f}'))
 
-bb = get_square_data(8)
-print(bb)
 
