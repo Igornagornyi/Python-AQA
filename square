@@ -5,5 +5,3 @@ def square_data(a:int)->tuple:
     result3 = (a**2*2)**(1/2)
     return (result1, result2, f'{result3:.3f}')
 
-ff = square_data(5)
-print(ff)
