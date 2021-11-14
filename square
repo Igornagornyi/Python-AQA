@@ -1,0 +1,9 @@
+def square_data(a:int)->tuple:
+    """Функция вычисляет площадь(result1), периметр(result2) и диагональ(result3) квадрата"""
+    result1 = a**2
+    result2 = a*4
+    result3 = (a**2*2)**(1/2)
+    return (result1, result2, f'{result3:.3f}')
+
+ff = square_data(5)
+print(ff)

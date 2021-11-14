@@ -1,0 +1,29 @@
+
+def arithmetic(value1:int, value2:int, operation:str)->int:
+    """Функция сложения, вычитания, умножения, деления значений"""
+
+    # Cложение значений
+    if operation == '+':
+        result = value1 + value2    
+    # Вычитание значений
+    elif operation == '-':
+        result = value1 - value2
+
+    # Умножение значений
+    elif operation == '*':
+        result = value1 * value2
+
+    # Деление значений
+    elif operation == '/':
+        result = value1/value2
+
+    # Если значения неизвестны - возвращать строку "неизвестная операция" 
+    else:
+        result = f"Not known operation {operation}"
+
+    return result
+
+
+er = arithmetic(value1=3, value2=5, operation='*')
+print(er)
+v=0
