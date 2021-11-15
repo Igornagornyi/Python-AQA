@@ -1,7 +1,5 @@
 def get_square_data(a:int)->tuple[int]:
-
-    """Function calculates area of square, perimetr and diagonal"""
-
+    """Calculate area of square, perimetr and diagonal"""
     area_square = a**2
     perimetr = a*4
     diagonal = (a**2*2)**(1/2)
