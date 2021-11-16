@@ -14,7 +14,3 @@ def arithmetic(value1: int, value2: int, operation: str) -> int| float |str:
 
     return result
 
-qq = 0
-er = 3
-jjkk = 9
-
