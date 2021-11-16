@@ -13,5 +13,8 @@ def arithmetic(value1: int, value2: int, operation: str) -> int| float |str:
         result = f"Not known operation {operation}"
 
     return result
-v = 0
+
+qq = 0
+er = 3
+jjkk = 9
 
