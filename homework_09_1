@@ -1,4 +1,4 @@
-def get_square_data(a:int)->tuple[int]:
+def get_square_data(a: int) -> tuple[int, float]:
     """Calculate area of square, perimetr and diagonal"""
     area_square = a**2
     perimetr = a*4
@@ -7,3 +7,4 @@ def get_square_data(a:int)->tuple[int]:
     return (area_square, perimetr, float(f'{diagonal:.3f}'))
 
 
+c = 0
