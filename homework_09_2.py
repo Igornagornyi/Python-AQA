@@ -1,8 +1,8 @@
 
-def arithmetic(value1: int, value2: int, operation: str) -> int| float |str:
+def arithmetic(value1: int, value2: int, operation: str) -> int | float | str:
     """Summerize, subtract, multiply, divide values"""
     if operation == '+':
-        result = value1 + value2    
+        result = value1 + value2
     elif operation == '-':
         result = value1 - value2
     elif operation == '*':
@@ -13,5 +13,3 @@ def arithmetic(value1: int, value2: int, operation: str) -> int| float |str:
         result = f"Not known operation {operation}"
 
     return result
-
-
