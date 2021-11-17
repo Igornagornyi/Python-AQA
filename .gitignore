@@ -4,4 +4,4 @@ files.txt
 .idea/
 my_text.txt
 rozetka.html
-_pycache_/
+__pycache__/
