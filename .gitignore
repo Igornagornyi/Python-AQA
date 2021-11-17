@@ -4,5 +4,8 @@ files.txt
 .idea/
 my_text.txt
 rozetka.html
-/__pycache__
+__pycache__/
 requirements.txt
+
+
+
