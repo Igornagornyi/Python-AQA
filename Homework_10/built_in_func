@@ -1,9 +1,4 @@
 def find_common_elem(list1: str, list2: str) -> list[str]:
     result = list(filter(lambda i: i in list1, list2))
     return f'Вот общие элементы: {result}'
-
-
-list1 = ['dd', 'ee', 'jj', 'hh']
-list2 = ['ee', 'll', 'mm', 'hh']
-
-print(find_common_elem(list1, list2))
+    
