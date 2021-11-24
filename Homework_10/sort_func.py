@@ -22,7 +22,7 @@ def sort_items_by_length(list1: list, list2: list) -> list[str]:
 
 
 vv = sort_items_by_length(list1, list2)
-print(vv)
+# print(vv)
 
 
 def sorted_func(list1: list, list2: list) -> list[str]:
@@ -39,4 +39,4 @@ def sorted_func(list1: list, list2: list) -> list[str]:
     return f"{reusult1}\n{result2}"
 
 
-print(sorted_func(list1, list2))
+# print(sorted_func(list1, list2))

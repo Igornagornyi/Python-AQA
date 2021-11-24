@@ -20,7 +20,7 @@ def find_common_elem(list1: list, list2: list) -> list[list] | str:
 
 
 ff = find_common_elem(list1, list2)
-print(ff)
+# print(ff)
 
 
 def filter_func(list1: list, list2: list) -> list[list] | str:
@@ -34,4 +34,4 @@ def filter_func(list1: list, list2: list) -> list[list] | str:
         return 'Спробуй ще'
 
 
-print(filter_func(list1, list2))
+# print(filter_func(list1, list2))
