@@ -10,12 +10,28 @@ list2 = [random.choices(string.ascii_letters,
 
 
 def find_common_elem(list1: list, list2: list) -> list[list] | str:
+    """Find the same elements in both lists """
+    my_list = []
+    for i in list1:
+        if i in list2:
+            my_list.append(i)
+
+    return my_list
+
+
+ff = find_common_elem(list1, list2)
+print(ff)
+
+
+def filter_func(list1: list, list2: list) -> list[list] | str:
     """Find common elements in both lists"""
     result = list(filter(lambda i: i in list1, list2))
     if result:
+
         return f"Вот общие элементы: {result}"
     else:
+
         return 'Спробуй ще'
 
 
-print(find_common_elem(list1, list2))
+print(filter_func(list1, list2))
