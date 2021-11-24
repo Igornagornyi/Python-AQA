@@ -1,9 +1,21 @@
-def find_common_elem(list1: str, list2: str) -> list[str]:
+import string
+import random
+
+
+# Create two lists with random str elements
+list1 = [random.choices(string.ascii_letters,
+         k=random.randint(1, 5)) for i in range(50)]
+list2 = [random.choices(string.ascii_letters,
+         k=random.randint(1, 5)) for i in range(50)]
+
+
+def find_common_elem(list1: list, list2: list) -> list[list] | str:
     """Find common elements in both lists"""
     result = list(filter(lambda i: i in list1, list2))
-    return f'Вот общие элементы: {result}'
+    if result:
+        return f"Вот общие элементы: {result}"
+    else:
+        return 'Спробуй ще'
 
 
-list1 = ['rr', 'nn', 'mk', '/23']
-list2 = ['vv', '23', 'mk', 'qw']
 print(find_common_elem(list1, list2))

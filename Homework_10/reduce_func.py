@@ -1,12 +1,13 @@
+from filter_func import list1, list2
 from functools import reduce
 
 
-def find_max_value(my_list: int) -> int:
-    """Subtract minimum value from maximum value in the list"""
-    result = reduce(lambda a, b: a-b if a > b else b-a, my_list)
+def find_max_value(list1: list, list2: list) -> list[str]:
+    """Create lists with max length items"""
+    list_str1 = reduce(lambda a, b: a if len(a) >= len(b) else b, list1)
+    list_str2 = reduce(lambda a, b: a if len(a) >= len(b) else b, list2)
 
-    return result
+    return f"{list_str1}\n{list_str2}"
 
 
-my_list = [1, 10, 60]
-print(find_max_value(my_list))
+print(find_max_value(list1, list2))
