@@ -1,19 +1,22 @@
-def print_func(function):
+def print_file_name_func(function) -> str:
+    """Print name of the callable file plus arithm operation"""
     def decoratee(a, b):
         return f"{function.__name__} {function(a, b)}"
 
     return decoratee
 
 
-@print_func
-def sum_arg(a: int, b: int) -> int:
+@print_file_name_func
+def sum_elements(a: int, b: int) -> int:
+    """Summarize two elements"""
     return a + b
 
 
-@print_func
-def subtract_arg(a: int, b: int) -> int:
-    return a - b
+@print_file_name_func
+def mult_elements(a: int, b: int) -> int:
+    """Multiply two elements"""
+    return a * b
 
 
-print(sum_arg(3, 9))
-print(subtract_arg(3, 10))
+print(sum_elements(3, 9))
+print(mult_elements(3, 10))
