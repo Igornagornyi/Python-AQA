@@ -6,6 +6,10 @@ def raise_a_number(length: int) -> int:
         yield counter**2 if counter % 2 == 0 else counter
 
 
-cc = raise_a_number(1000000000)
-for counter in cc:
-    print(counter)
+def show_numbers(number: int):
+    for counter in raise_a_number(number):
+        print(counter)
+
+
+nn = show_numbers(100)
+print(nn)
