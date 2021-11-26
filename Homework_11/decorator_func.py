@@ -1,7 +1,8 @@
 def print_file_name_func(function) -> str:
     """Print name of the callable file plus ariphm operation"""
     def decoratee(a, b):
-        return function.__name__, function(a, b)
+        print(function.__name__)
+        return function(a, b)
 
     return decoratee
 
@@ -18,5 +19,5 @@ def mult_elements(a: int, b: int) -> int:
     return a * b
 
 
-print(sum_elements(3, 9))
-print(mult_elements(3, 10))
+print(sum_elements(39, 9))
+print(mult_elements(567, 1678))
