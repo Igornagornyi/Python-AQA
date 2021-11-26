@@ -20,4 +20,3 @@ def mult_elements(a: int, b: int) -> int:
 
 print(sum_elements(3, 9))
 print(mult_elements(3, 10))
-print(mult_elements(4, 66))
