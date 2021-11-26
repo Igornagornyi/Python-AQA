@@ -2,7 +2,7 @@ from filter_func import list1, list2
 from functools import reduce
 
 
-def find_max_item(list1: list, list2: list) -> list[str]:
+def find_max_item(list1: list, list2: list) -> list:
     """Find max length item in the list"""
     my_list1 = []
     my_list2 = []
@@ -17,10 +17,10 @@ def find_max_item(list1: list, list2: list) -> list[str]:
 
 
 rr = find_max_item(list1, list2)
-# print(rr)
+print(rr)
 
 
-def reduce_func(list1: list, list2: list) -> list[str]:
+def reduce_func(list1: list, list2: list) -> list:
     """Create lists with max length items"""
     list_str1 = reduce(lambda a, b: a if len(a) >= len(b) else b, list1)
     list_str2 = reduce(lambda a, b: a if len(a) >= len(b) else b, list2)
@@ -28,4 +28,4 @@ def reduce_func(list1: list, list2: list) -> list[str]:
     return f"{list_str1}\n{list_str2}"
 
 
-# print(reduce_func(list1, list2))
+print(reduce_func(list1, list2))
