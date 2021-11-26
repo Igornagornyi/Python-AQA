@@ -2,3 +2,4 @@ python3.9/
 python3.10/
 .idea/
 __*__/
+os_walk_func.py
