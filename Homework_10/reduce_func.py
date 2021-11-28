@@ -1,8 +1,8 @@
 from filter_func import list_elem
 
 
-def find_sum_items(callback: callable,
-                   sequence: list[str]) -> int:
+def implement_reduce_func(callback: callable,
+                          sequence: list[str]) -> int:
     """Find sum of length of items in the list"""
     str_list = []
     int_list = []
@@ -15,4 +15,4 @@ def find_sum_items(callback: callable,
     return result
 
 
-print(find_sum_items(lambda item: sum(list_elem), list_elem))
+print(implement_reduce_func(lambda item: sum(list_elem), list_elem))

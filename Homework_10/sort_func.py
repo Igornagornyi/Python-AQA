@@ -1,8 +1,8 @@
 from filter_func import list_elem
 
 
-def sort_items_by_length(callback: callable,
-                         sequence: list[str]) -> list:
+def implement_sort_func(callback: callable,
+                        sequence: list[str]) -> list:
     """Create list with str elements in desc order"""
     str_list = []
     order_list = []
@@ -14,4 +14,4 @@ def sort_items_by_length(callback: callable,
     return order_list
 
 
-print(sort_items_by_length(lambda item: len(item), list_elem))
+print(implement_sort_func(lambda item: len(item), list_elem))
