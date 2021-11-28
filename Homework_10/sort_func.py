@@ -2,7 +2,7 @@ from filter_func import list_elem
 
 
 def implement_sort_func(callback: callable,
-                        sequence: list[str]) -> list:
+                        sequence: list[str]) -> list[str]:
     """Create list with str elements in desc order"""
     str_list = []
     order_list = []
