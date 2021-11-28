@@ -3,50 +3,21 @@ import random
 
 
 # Create two lists with random str elements
-list1 = [random.choices(string.ascii_letters,
-         k=random.randint(1, 5)) for i in range(50)]
-list2 = [random.choices(string.ascii_letters,
-         k=random.randint(1, 5)) for i in range(50)]
+list_elem = [random.choices(string.ascii_letters,
+             k=random.randint(1, 5)) for i in range(100)]
 
 
-def find_common_elem(list1: list, list2: list) -> set:
-    """Find the same elements in both lists """
+def find_common_elem(callback: callable,
+                     sequence: list[str]) -> tuple[str]:
+    """Find elements in the list which count > 1"""
     my_list = []
-    for i in list1:
-        if i in list2:
-            my_list.append(''.join(i))
+    for item in sequence:
+        if callback(item):
+            my_list.append(''.join(item))
         result = set(my_list)
-    if result:
 
-        return f"Вот общие элементы: {result}"
-    else:
-
-        return 'Cпробуй ще'
+    return result
 
 
-
-
-
-
-
-
-ff = find_common_elem(list1, list2)
-print(ff)
-
-#
-def filter_func(list1: list, list2: list) -> set:
-    """Find common elements in both lists"""
-    my_list = []
-    result = list(filter(lambda i: i in list1, list2))
-    for i in result:
-        my_list.append(''.join(i))
-        result = set(my_list)
-    if result:
-
-        return f"Вот общие элементы: {result}"
-    else:
-
-        return 'Спробуй ще'
-
-
-print(filter_func(list1, list2))
+print(find_common_elem(lambda element:
+                       list_elem.count(element) > 1, list_elem))

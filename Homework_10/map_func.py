@@ -1,28 +1,14 @@
-from filter_func import list1, list2
+from filter_func import list_elem
 
 
-def add_element(list1: list, list2: list) -> list:
+def add_element(callback: callable,
+                sequence: list[str]) -> list[str]:
     """Add element 's' to str elements in the list"""
-    my_list1 = []
-    my_list2 = []
-    for i in list1:
-        my_list1.append(''.join(i)+'s')
-    for q in list2:
-        my_list2.append(''.join(q)+'s')
+    my_list = []
+    for item in sequence:
+        my_list.append(''.join(item)+'s')
 
-    return f"{my_list1}\n{my_list2}"
+    return my_list
 
 
-yy = add_element(list1, list2)
-print(yy)
-
-
-def map_func(list1: list, list2: list) -> list:
-    """Add element 's' to every element in the lists"""
-    list_str1 = list(map(lambda i: ''.join(i) + 's', list1))
-    list_str2 = list(map(lambda i: ''.join(i) + 's', list2))
-
-    return f"{list_str1}\n{list_str2}"
-
-
-print(map_func(list1, list2))
+print(add_element(lambda item: item + 's', list_elem))
