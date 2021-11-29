@@ -1,8 +1,9 @@
 from filter_func import list_elem
+from typing import List
 
 
-def implement_sort_func(callback: callable,
-                        sequence: list[str]) -> list[str]:
+def implement_sort_func(function,
+                        sequence: List[str]) -> List[str]:
     """Create list with str elements in desc order"""
     str_list = []
     order_list = []

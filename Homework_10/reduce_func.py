@@ -1,8 +1,9 @@
 from filter_func import list_elem
+from typing import List
 
 
 def implement_reduce_func(callback: callable,
-                          sequence: list[str]) -> int:
+                          sequence: List[str]) -> int:
     """Find sum of length of items in the list"""
     str_list = []
     int_list = []
