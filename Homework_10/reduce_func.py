@@ -9,11 +9,10 @@ def implement_reduce_func(callback: callable,
     int_list = []
     for item in sequence:
         str_list.append(''.join(item))
-    for element in str_list:
-        int_list.append(len(element))
-    result = sum(int_list)
+    for item in str_list:
+        int_list.append(callback(len(item)))
 
-    return result
+    return int_list
 
 
-print(implement_reduce_func(lambda item: sum(list_elem), list_elem))
+print(implement_reduce_func(lambda item: item, list_elem))
