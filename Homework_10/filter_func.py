@@ -13,8 +13,8 @@ def implement_filter_func(callback: callable,
     """Find elements in the list which count > int"""
     my_list = []
     for item in sequence:
-        number = sequence.count(item)
-        if callback(number):
+        count = sequence.count(item)
+        if callback(count):
             my_list.append(item)
     for item in my_list:
         my_list = ''.join(item)
@@ -22,5 +22,5 @@ def implement_filter_func(callback: callable,
     return set(my_list)
 
 
-print(implement_filter_func(lambda number:
-                            number > 1, list_elem))
+print(implement_filter_func(lambda count:
+                            count > 1, list_elem))
