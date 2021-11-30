@@ -2,8 +2,7 @@ from filter_func import list_elem
 from typing import List
 
 
-def implement_sort_func(function,
-                        sequence: List[str]) -> List[str]:
+def implement_sort_func(sequence: List[str]) -> List[str]:
     """Create list with str elements in desc order"""
     str_list = []
     order_list = []
@@ -15,4 +14,4 @@ def implement_sort_func(function,
     return order_list
 
 
-print(implement_sort_func(lambda item: len(item), list_elem))
+print(implement_sort_func(list_elem))

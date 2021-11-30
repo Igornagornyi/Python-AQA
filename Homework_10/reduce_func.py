@@ -15,4 +15,4 @@ def implement_reduce_func(callback: callable,
     return int_list
 
 
-print(implement_reduce_func(lambda item: item, list_elem))
+print(implement_reduce_func(lambda item: item + 0, list_elem))
