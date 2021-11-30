@@ -22,10 +22,11 @@ def add_operation(initial_value, item):
     return initial_value + item
 
 
-def reduce(add_operation, initial_value: int, List: int) -> int:
+def implement_reduce_func(add_operation,
+                          initial_value: int, List: int) -> int:
     for item in List:
         initial_value = add_operation(initial_value, item)
     return initial_value
 
 
-print(reduce(add_operation, initial_value=0, List=function))
+print(implement_reduce_func(add_operation, initial_value=0, List=function))

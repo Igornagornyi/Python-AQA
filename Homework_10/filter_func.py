@@ -3,7 +3,7 @@ import random
 from typing import List, Tuple
 
 
-# Create two lists with random str elements
+# Create list with random str elements
 list_elem = [random.choices(string.ascii_letters,
              k=random.randint(1, 5)) for i in range(50)]
 
