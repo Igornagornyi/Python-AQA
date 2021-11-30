@@ -18,12 +18,13 @@ function = convert_str_to_int(list_elem)
 
 
 def add_operation(initial_value, item):
-    """Function summarizes elements"""
+    """Function summarizes two elements"""
     return initial_value + item
 
 
 def implement_reduce_func(add_operation,
                           initial_value: int, List: int) -> int:
+    """Function summarizes elements in the list with each other"""
     for item in List:
         initial_value = add_operation(initial_value, item)
     return initial_value
