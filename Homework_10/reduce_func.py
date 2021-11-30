@@ -2,17 +2,30 @@ from filter_func import list_elem
 from typing import List
 
 
-def implement_reduce_func(callback: callable,
-                          sequence: List[str]) -> int:
-    """Find sum of length of items in the list"""
+def convert_str_to_int(sequence: List[str]) -> int:
+    """Function converts str elem to int"""
     str_list = []
     int_list = []
     for item in sequence:
         str_list.append(''.join(item))
     for item in str_list:
-        int_list.append(callback(len(item)))
+        int_list.append((len(item)))
 
     return int_list
 
 
-print(implement_reduce_func(lambda item: item + 0, list_elem))
+function = convert_str_to_int(list_elem)
+
+
+def add_operation(initial_value, item):
+    """Function summarizes elements"""
+    return initial_value + item
+
+
+def reduce(add_operation, initial_value: int, List: int) -> int:
+    for item in List:
+        initial_value = add_operation(initial_value, item)
+    return initial_value
+
+
+print(reduce(add_operation, initial_value=0, List=function))
