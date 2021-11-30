@@ -10,14 +10,17 @@ list_elem = [random.choices(string.ascii_letters,
 
 def implement_filter_func(callback: callable,
                           sequence: List[str]) -> Tuple[str]:
-    """Find elements in the list which count > 1"""
+    """Find elements in the list which count > int"""
     my_list = []
     for item in sequence:
-        if callback(item):
-            my_list.append(''.join(item))
+        number = sequence.count(item)
+        if callback(number):
+            my_list.append(item)
+    for item in my_list:
+        my_list = ''.join(item)
 
     return set(my_list)
 
 
-print(implement_filter_func(lambda item:
-                            list_elem.count(item) > 1, list_elem))
+print(implement_filter_func(lambda number:
+                            number > 1, list_elem))
