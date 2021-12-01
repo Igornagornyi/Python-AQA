@@ -1,5 +1,10 @@
-from filter_func import list_elem
 from typing import List
+import random
+import string
+
+
+list_elem = [random.choices(string.ascii_letters,
+             k=random.randint(1, 5)) for i in range(50)]
 
 
 def implement_map_func(callback: callable,
