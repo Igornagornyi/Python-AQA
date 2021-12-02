@@ -6,8 +6,7 @@ def sum_operation(value, item):
     return value + item
 
 
-def implement_reduce_func(sum_operation,
-                          value: int, List: int) -> int:
+def implement_reduce_func(function, value: int, List: int) -> int:
     """Summarize elements in the list with each other"""
     for item in List:
         value = sum_operation(value, item)
