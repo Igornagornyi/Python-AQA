@@ -1,9 +1,6 @@
 from operator import add
 
 
-list = [3, 35, 97, 72, 19]
-
-
 def implement_reduce_func(callback: callable, value: int, List: int) -> int:
     """Summarize elements in the list with each other"""
     result = value
