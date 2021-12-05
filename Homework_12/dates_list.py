@@ -1,7 +1,9 @@
 import calendar
+from typing import List
 
 
-def show_dates():
+def show_dates() -> List[int]:
+    """Show list of even dates"""
     dates_list = []
     user_year = int(input('Введите год: '))
     user_month = int(input(' Введите месяц: '))
