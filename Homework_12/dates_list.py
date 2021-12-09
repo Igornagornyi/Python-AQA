@@ -15,7 +15,7 @@ def show_dates() -> List[str]:
                           else None
         counter += 1
 
-    return dates_list
+    return f"Список четных дат на текущий месяц: {dates_list}"
 
 
 print(show_dates())

@@ -2,7 +2,7 @@ import time
 from typing import List
 
 
-def time_decor(function) -> int:
+def time_decor(function) -> str:
     """Calculate time of operation"""
     def decoratee(number):
         start_point = time.time()
@@ -16,7 +16,7 @@ def time_decor(function) -> int:
 @time_decor
 def raise_number(length: int) -> List[int]:
     """Raise to square all numbers from 0 to given int"""
-    int_list = []
+    int_list = [] 
     counter = 0
     while counter < length:
         counter += 1
@@ -24,4 +24,4 @@ def raise_number(length: int) -> List[int]:
     print(int_list)
 
 
-print(raise_number(100))
+print(raise_number(10000))
