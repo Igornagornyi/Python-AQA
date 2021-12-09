@@ -2,14 +2,14 @@ import time
 from typing import List
 
 
-def time_decor(function) -> str:
+def time_decor(function) -> int:
     """Calculate time of operation"""
     def decoratee(number):
         start_point = time.time()
         function(number)
         end_point = time.time()
-        return f'Время выполнения:{end_point - start_point}'
-
+        time_operating = end_point - start_point
+        return f"Время выполнения: {time_operating}"
     return decoratee
 
 
@@ -24,4 +24,4 @@ def raise_number(length: int) -> List[int]:
     print(int_list)
 
 
-print(raise_number(10000))
+print(raise_number(100))
