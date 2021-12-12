@@ -7,21 +7,22 @@ def time_decor(function) -> str:
     def decoratee(number):
         start_point = time.time()
         function(number)
-        end_point = time.time()
-        time_operating = end_point - start_point
-        return f"Время выполнения: {time_operating}"
+        time_operating = time.time() - start_point
+        print(f"Время выполнения: {time_operating}")
     return decoratee
 
 
 @time_decor
 def raise_number(length: int) -> List[int]:
     """Raise to square all numbers from 0 to given int"""
-    int_list = [] 
+    int_list = []
     counter = 0
     while counter < length:
         counter += 1
         int_list.append(counter**2)
     print(int_list)
+    
 
-
-print(raise_number(10000))
+if __name__ == '__main__':
+    
+    raise_number(10000)
