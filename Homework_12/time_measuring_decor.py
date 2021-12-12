@@ -6,9 +6,10 @@ def time_decor(function) -> str:
     """Calculate time of operation"""
     def decoratee(number):
         start_point = time.time()
-        function(number)
+        result = function(number)
         time_operating = time.time() - start_point
         print(f"Время выполнения: {time_operating}")
+        return result
     return decoratee
 
 

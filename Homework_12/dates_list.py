@@ -10,9 +10,9 @@ def show_dates() -> List[str]:
     quantity = calendar.monthrange(today.year, today.month)[1]
     counter = 1
     while counter <= quantity:
-        date = datetime.date(today.year, today.month, counter)
-        format_date = date.strftime("%d %B %Y")
-        dates_list.append(format_date) if counter % 2 == 0 else None
+        date = today.year, today.month, counter
+        # format_date = date.strftime("%d %B %Y")
+        dates_list.append(date) if counter % 2 == 0 else None
         counter += 1
 
     return f"Список четных дат на текущий месяц: {dates_list}"
