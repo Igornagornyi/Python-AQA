@@ -7,8 +7,8 @@ check_value = [['\\a', 'Bell (alert)'], ['\\b', 'Backspace'],
                ["\\", "Backslash \ "], ['\\"', 'Double quotation mark "']]
 
 
-class Homework4Test(unittest.TestCase):
-
+class CheckValue(unittest.TestCase):
+    """Check value in escape sequence table"""
     def test_a(self):
         out = print_table(column_name, value)
         exp = print_table(column_name, value)
