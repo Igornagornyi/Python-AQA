@@ -7,12 +7,19 @@ check_value = [['\\a', 'Bell (alert)'], ['\\b', 'Backspace'],
                ["\\", "Backslash \ "], ['\\"', 'Double quotation mark "']]
 
 
-class CheckValue(unittest.TestCase):
-    """Check value in escape sequence table"""
+class CheckTable(unittest.TestCase):
+
     def test_a(self):
-        out = print_table(column_name, value)
+        """Check horizontal value in escape sequence table"""
+        out = print_table(column_name, check_value)
         exp = print_table(column_name, value)
         self.assertEqual(out, exp)
+
+    def test_b(self):
+        """Check item in the list"""
+        out = 'escape sequencies'
+        exp = column_name
+        self.assertIn(out, exp)
 
 
 if __name__ == '__main__':
