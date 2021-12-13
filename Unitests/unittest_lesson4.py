@@ -9,7 +9,7 @@ check_value = [['\\a', 'Bell (alert)'], ['\\b', 'Backspace'],
 
 class CheckTable(unittest.TestCase):
 
-    def test_a(self):
+    def test_a(self):  # error
         """Check horizontal value in escape sequence table"""
         out = print_table(column_name, check_value)
         exp = print_table(column_name, value)
