@@ -10,13 +10,13 @@ check_value = [['\\a', 'Bell (alert)'], ['\\b', 'Backspace'],
 class CheckTable(unittest.TestCase):
 
     def test_a(self):  # error
-        """Check horizontal value in escape sequence table"""
+        """Check horizontal element in escape sequence table"""
         out = print_table(column_name, check_value)
         exp = print_table(column_name, value)
         self.assertEqual(out, exp)
 
     def test_b(self):
-        """Check item in the list"""
+        """Check vertical element in escape sequence table"""
         out = 'escape sequencies'
         exp = column_name
         self.assertIn(out, exp)
