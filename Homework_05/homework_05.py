@@ -14,7 +14,8 @@ friends_list = ["John", "Marta", "James", "Amanda", "Marianna"]
 
 def print_friends(value: List[str]) -> str:
     """Print names in list in column"""
-    print("Name".center(20, '*'))
+    first_line = "Name".center(20, '*')
+    print(first_line)
     for name in friends_list:
         print(name.rjust(10))
 
