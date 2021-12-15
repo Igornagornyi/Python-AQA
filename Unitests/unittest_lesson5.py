@@ -24,11 +24,11 @@ class PrintFriends(unittest.TestCase):
     def test_a(self):  # error
         """Check given value is str"""
         out = homework_05.print_friends(value=friends_list)
-        self.assertIsInstance(out, str)
+        self.assertIsInstance(out, list)
 
     def test_b(self):  # error
         """Check length of given value equal to 30"""
-        self.assertEqual(len(friends_list), 30)
+        self.assertEqual(len(friends_list), 5)
 
 
 class CreateDict(unittest.TestCase):
