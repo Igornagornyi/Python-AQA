@@ -2,17 +2,17 @@ from enum import Enum
 
 
 class Time(Enum):
-    morning = 0
-    lunch = 1
-    evening = 2
-    night = 3
+    MORNING = 0
+    LUNCH = 1
+    EVENING = 2
+    NIGHT = 3
 
 
 class Weather(Enum):
-    sunny = 0
-    cold = 1
-    rainy = 2
-    hot = 3
+    SUNNY = 0
+    COLD = 1
+    RAINY = 2
+    HOT = 3
 
 
 class Pet:
@@ -20,25 +20,25 @@ class Pet:
         self.__name = name
 
     def today(self, time: Time, weather: Weather) -> None:
-        if time == Time.morning:
+        if time == Time.MORNING:
             print(f"It's time to walk with {self.__name}")
-        elif time == Time.lunch:
+        elif time == Time.LUNCH:
             print(f"It's time for lunch for {self.__name}")
-        elif time == Time.evening:
+        elif time == Time.EVENING:
             print(f"It's time for evening walk with {self.__name}")
-        elif time == Time.night:
+        elif time == Time.NIGHT:
             print(f"It's time to sleep for {self.__name}")
-        if weather == Weather.sunny:
+        if weather == Weather.SUNNY:
             print("It's sunny today")
-        elif weather == Weather.cold:
+        elif weather == Weather.COLD:
             print("It's cold outside")
-        elif weather == Weather.rainy:
+        elif weather == Weather.RAINY:
             print("It's rainy outside")
-        elif weather == Weather.hot:
+        elif weather == Weather.HOT:
             print("It's hot outside")
 
 
 if __name__ == '__main__':
 
     my_pet = Pet('Zak')
-    my_pet.today(Time.night, Weather.rainy)
+    my_pet.today(Time.NIGHT, Weather.RAINY)
