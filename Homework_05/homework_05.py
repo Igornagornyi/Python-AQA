@@ -1,31 +1,35 @@
 from typing import List
 
 
-#1
+# 1
 names_str = "john marta james Morgan Adam Maria huang"
+
 
 def capital_names(value: str) -> str:
     """Print names in str with capital letter"""
     capital_names_str = value.title()
     return capital_names_str
 
-#2
+
+# 2
 friends_list = ["John", "Marta", "James", "Amanda", "Marianna"]
 
-def print_friends(value: List[str]) -> str:
-    """Print names in list in column"""
-    first_line = "Name".center(20, '*')
-    print(first_line)
-    for name in friends_list:
-        print(name.rjust(10))
 
-#3
+def print_friends(value: List[str]):
+    """Print names in list in column"""
+    print("Name".center(20, '*'))
+    for item in value:
+        print(item.rjust(10))
+
+
+# 3
 query_str = "name=Amanda=sssss&age=32&&salary=1500&currency=quro"
+
 
 def create_dict(value: str) -> dict:
     """Create dict from str"""
     my_dict = {}
-    new_query_str = query_str.split('&&')
+    new_query_str = value.split('&&')
     format_1 = ''.join(new_query_str[0]).split('&')
     format_11 = ''.join(format_1[0]).split('=', 1)
     format_12 = ''.join(format_1[1]).split('=')
@@ -39,8 +43,9 @@ def create_dict(value: str) -> dict:
     return my_dict
 
 
-#4
+# 4
 camel_case = ["FirstItem", "FriendsList", "MyTuple"]
+
 
 def create_str(value: List[str]) -> List[str]:
     my_str1 = ''.join(value[0])
@@ -73,7 +78,7 @@ def create_str(value: List[str]) -> List[str]:
     my_list4.append(''.join(my_list31).lower())
     return my_list4
 
-#5
+# 5
 # my_list = []
 # with open('my_text.txt', encoding='utf-8') as file_object:
 #     for line in file_object:
@@ -86,4 +91,3 @@ if __name__ == '__main__':
     print_friends(value=friends_list)
     print(create_dict(value=query_str))
     print(create_str(value=camel_case))
-
