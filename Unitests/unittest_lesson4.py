@@ -7,7 +7,7 @@ check_value = [['\\a', 'Bell (alert)'], ['\\b', 'Backspace'],
                ["\\", "Backslash \ "], ['\\"', 'Double quotation mark "']]
 
 
-class CheckTable(unittest.TestCase):
+class PrintTable(unittest.TestCase):
 
     def test_a(self):  # error
         """Check horizontal element in escape sequence table"""
