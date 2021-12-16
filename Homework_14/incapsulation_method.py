@@ -24,22 +24,22 @@ class Pet:
         if time == Time.MORNING:
             print(f"It's time to walk with {self.__name}")
             res_time = (self.__min_time + max_time) // 2
-            print(f"Now time recommende for walk is {res_time}")
+            print(f"Now time recommended for walk is {res_time}")
 
         elif time == Time.LUNCH:
             print(f"It's time for lunch for {self.__name}")
             res_time = (self.__min_time + max_time) // 2
-            print(f"Now time recommende for walk is {res_time}")
+            print(f"Now time recommended for walk is {res_time}")
 
         elif time == Time.EVENING:
             print(f"It's time for evening walk with {self.__name}")
             res_time = (self.__min_time + max_time) // 2
-            print(f"Now time recommende for walk is {res_time}")
+            print(f"Now time recommended for walk is {res_time}")
 
         elif time == Time.NIGHT:
             print(f"It's time to sleep for {self.__name}")
             res_time = 0
-            print(f"Now time recommende for walk is {res_time}")
+            print(f"Now time recommended for walk is {res_time}")
 
         if weather == Weather.SUNNY:
             print("It's sunny today")
