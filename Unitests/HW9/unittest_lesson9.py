@@ -21,20 +21,16 @@ class GetSquare(unittest.TestCase):
         for item in out:
             self.assertIsInstance(item, int)
 
-    def test_len(self):
-        """Check len of float element equal to 5"""
+    def test_dot(self):
+        """Check dot in str"""
         out = get_square_data(3)
         self.assertIn('.', str(out[2]))
 
     @unittest.skipIf(os.name != 'Windows', reason='Not supported')
-    def test_len_float(self):
-        """Check len of float element equal to 5"""
-        my_list = []
+    def test_dot_in_str(self):
+        """Check dot in str"""
         out = get_square_data(3)
-        my_list.append(str(out[2]))
-        for i in my_list:
-            my_list = list(i)
-        self.assertEqual(len(my_list), 5)
+        self.assertIn('.', str(out[2]))
 
 
 class Arithmetic(unittest.TestCase):
