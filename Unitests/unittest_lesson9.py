@@ -2,6 +2,7 @@ from Homework_09.homework_09_1 import get_square_data
 from Homework_09.homework_09_2 import arithmetic
 import unittest
 import os
+from first_logging import logger
 
 
 class GetSquare(unittest.TestCase):
@@ -9,7 +10,9 @@ class GetSquare(unittest.TestCase):
     def test_type(self):
         """Check type of output"""
         out = get_square_data(3)
+        logger.info('chicking info')
         self.assertIsInstance(out, tuple)
+        logger.error('checking error')
 
     @unittest.expectedFailure
     def test_int(self):  # error
@@ -44,6 +47,7 @@ class Arithmetic(unittest.TestCase):
         """Check validation of unknown operation"""
         out = arithmetic(4, 2, '=')
         self.assertEqual(out, "Not known operation =")
+        logger.debug('checking debug operation')
         out = arithmetic(5, 4, '+')
         self.assertEqual(out, 9)
         out = arithmetic(5, 4, '/')
