@@ -6,4 +6,5 @@ def get_square_data(a: int) -> tuple[int, int, float]:
     return area_square, perimetr, float(f'{diagonal:.3f}')
 
 
-print(get_square_data(10))
+if __name__ == '__main__':
+    print(get_square_data(1))

@@ -10,7 +10,7 @@ class GetSquare(unittest.TestCase):
     def test_type(self):
         """Check type of output"""
         out = get_square_data(3)
-        logger.info('chicking info')
+        logger.info('checking info')
         self.assertIsInstance(out, tuple)
         logger.error('checking error')
 
@@ -23,12 +23,8 @@ class GetSquare(unittest.TestCase):
 
     def test_len(self):
         """Check len of float element equal to 5"""
-        my_list = []
         out = get_square_data(3)
-        my_list.append(str(out[2]))
-        for i in my_list:
-            my_list = list(i)
-        self.assertEqual(len(my_list), 5)
+        self.assertIn('.', str(out[2]))
 
     @unittest.skipIf(os.name != 'Windows', reason='Not supported')
     def test_len_float(self):
