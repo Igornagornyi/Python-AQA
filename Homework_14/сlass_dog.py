@@ -15,7 +15,7 @@ class Dog:
         return self.__age
 
     @get_older.setter
-    def get_older(self, get_older) -> int:
+    def get_older(self, get_older):
         self.__age = get_older
 
     def first_meeting(self) -> str:
@@ -23,7 +23,6 @@ class Dog:
 
 
 if __name__ == '__main__':
-
     my_dog = Dog('Chack', 4, 'brown')
     my_dog.get_older += 10
     my_dog.print_age()
