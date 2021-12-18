@@ -2,7 +2,7 @@ import logging
 import sys
 import os
 
-logger = logging.getLogger()
+logger = logging.getLogger('MYFIRSTLOGS')
 logger.setLevel(logging.DEBUG)
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.DEBUG)

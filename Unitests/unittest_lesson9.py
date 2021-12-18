@@ -43,7 +43,7 @@ class Arithmetic(unittest.TestCase):
         """Check validation of unknown operation"""
         out = arithmetic(4, 2, '=')
         self.assertEqual(out, "Not known operation =")
-        logger.debug('checking debug operation')
+        logger.debug('*checking debug operation*')
         out = arithmetic(5, 4, '+')
         self.assertEqual(out, 9)
         out = arithmetic(5, 4, '/')
