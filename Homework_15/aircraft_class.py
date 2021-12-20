@@ -42,7 +42,7 @@ class Aircraft(StartUp, TakeOff, Fly, Land):
         self.__ac_speed = 100
 
     def startup_engines(self):
-        print("We are starting both engined")
+        print("We are starting both engines")
         return f"Now engines are {self.__engine_rotation} % of their power"
 
     def take_off(self):
