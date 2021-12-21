@@ -1,4 +1,4 @@
-from carbone_class import Carbone
+from carbone import Carbone
 
 
 class Hydrogen:

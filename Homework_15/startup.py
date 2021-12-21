@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-@abstractmethod
 class StartUp(ABC):
+    @abstractmethod
     def startup_engines(self):
         ...

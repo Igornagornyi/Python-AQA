@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-@abstractmethod
 class Land(ABC):
+    @abstractmethod
     def land(self):
         ...

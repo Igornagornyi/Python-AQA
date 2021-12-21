@@ -1,7 +1,7 @@
-from startup_class import StartUp
-from takeoff_class import TakeOff
-from land_class import Land
-from fly_class import Fly
+from startup import StartUp
+from takeoff import TakeOff
+from land import Land
+from fly import Fly
 
 
 class Aircraft(StartUp, TakeOff, Fly, Land):

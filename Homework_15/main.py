@@ -1,4 +1,4 @@
-from aircraft_class import Aircraft
+from aircraft import Aircraft
 
 
 if __name__ == '__main__':

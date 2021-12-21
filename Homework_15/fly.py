@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-@abstractmethod
 class Fly(ABC):
+    @abstractmethod
     def fly(self):
         ...

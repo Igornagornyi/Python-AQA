@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-@abstractmethod
 class TakeOff(ABC):
+    @abstractmethod
     def take_off(self):
         ...
