@@ -26,7 +26,7 @@ class GetSquare(unittest.TestCase):
         out = get_square_data(3)
         self.assertIn('.', str(out[2]))
 
-    @unittest.skipIf(os.name != 'Windows', reason='Not supported')
+    @unittest.skipIf(os.name != 'nt', reason='Not supported')
     def test_dot_in_str(self):
         """Check dot in str"""
         out = get_square_data(3)
@@ -43,7 +43,7 @@ class Arithmetic(unittest.TestCase):
         out = arithmetic(5, 4, '+')
         self.assertEqual(out, 9)
         out = arithmetic(5, 4, '/')
-        self.assertTrue(out, float)
+        self.assertIsInstance(out, float)
 
     @unittest.skip
     def test_skip_operation(self):
@@ -53,7 +53,7 @@ class Arithmetic(unittest.TestCase):
         out = arithmetic(5, 4, '+')
         self.assertEqual(out, 9)
         out = arithmetic(5, 4, '/')
-        self.assertTrue(out, float)
+        self.assertIsInstance(out, float)
 
 
 if __name__ == '__main__':
