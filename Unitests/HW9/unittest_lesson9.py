@@ -2,6 +2,7 @@ from Homework_09.homework_09_1 import get_square_data
 from Homework_09.homework_09_2 import arithmetic
 import unittest
 import os
+import sys
 from first_logging import logger
 
 
@@ -27,7 +28,13 @@ class GetSquare(unittest.TestCase):
         self.assertIn('.', str(out[2]))
 
     @unittest.skipIf(os.name != 'nt', reason='Not supported')
-    def test_dot_in_str(self):
+    def test_dot_skip(self):
+        """Check dot in str"""
+        out = get_square_data(3)
+        self.assertIn('.', str(out[2]))
+
+    @unittest.skipIf(sys.platform != 'win64', reason='Not supported')
+    def test_dot_in_skip2(self):
         """Check dot in str"""
         out = get_square_data(3)
         self.assertIn('.', str(out[2]))
