@@ -33,7 +33,7 @@ class GetSquare(unittest.TestCase):
         out = get_square_data(3)
         self.assertIn('.', str(out[2]))
 
-    @unittest.skipIf(sys.platform != 'win64', reason='Not supported')
+    @unittest.skipIf(sys.platform != 'nt64', reason='Not supported')
     def test_dot_skip2(self):
         """Check dot in str"""
         out = get_square_data(3)
