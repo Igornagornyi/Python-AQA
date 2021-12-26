@@ -17,7 +17,7 @@ class Hydrogen:
         return self.__hydrogen_name
 
     def __add__(self, other: Carbone):
-        return other.name + self.__hydrogen_name
+        return other.name + 2 * self.__hydrogen_name * 2
 
     def __radd__(self, other: Carbone):
-        return other.name + self.__hydrogen_name
+        return other.name + 2 * self.__hydrogen_name * 2
