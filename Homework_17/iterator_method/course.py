@@ -18,9 +18,8 @@ class Course:
         return self
 
     def __next__(self):
-        if self.__end_index <= len(self.__students):
+        while self.__start_index <= self.__end_index < len(self.__students):
             student = self.__students[self.__start_index]
-        while self.__start_index <= self.__end_index:
             self.__start_index += 1
             return student
         else:

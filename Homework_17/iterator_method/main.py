@@ -9,7 +9,6 @@ if __name__ == '__main__':
     kat = Student("Kat", "female", 29, "QA Automation")
     mike = Student("Mike", "male", 45, "DevOps")
 
-    course_students = Course(0, 3, [john, mary, tom, kat])
+    course_students = Course(1, 3, [john, mary, tom, kat])
     for student in course_students:
         print(student)
-
