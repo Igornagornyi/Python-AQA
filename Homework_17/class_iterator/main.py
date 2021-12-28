@@ -1,5 +1,5 @@
 from stud import Student
-from Homework_17.iterator_method.course import Course
+from Homework_17.class_iterator.course import Course
 
 
 if __name__ == '__main__':
