@@ -1,4 +1,4 @@
-from product import Product
+from Homework_18.Factory.product import Product
 
 
 class Strawbarry(Product):

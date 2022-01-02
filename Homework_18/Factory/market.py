@@ -1,6 +1,6 @@
-from apple import Apple
-from bannana import Bannana
-from cellery import Cellery
+from Homework_18.Factory.apple import Apple
+from Homework_18.Factory.bannana import Bannana
+from Homework_18.Factory.cellery import Cellery
 from strawbarry import Strawbarry
 from product import Product
 
