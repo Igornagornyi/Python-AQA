@@ -12,7 +12,7 @@ class Course:
         return self.__students.append(student)
 
     def add_students(self, students: List[Student]) -> None:
-        self.__students.extend(students)
+        return self.__students.extend(students)
 
     def __iter__(self):
         return self
