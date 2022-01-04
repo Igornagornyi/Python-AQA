@@ -1,15 +1,16 @@
 from typing import List
-from traincar_number import TrainNumber
 
 
-@TrainNumber("1")
 class TrainCar:
-    def __init__(self) -> None:
+    def __init__(self, tc_number: str) -> None:
         self.__passengers = []
+        self.__tc_number = tc_number
 
-    @property
-    def train_number(self) -> str:
-        return self.__train_number
+    def __str__(self) -> str:
+        return self.__tc_number
+
+    def get_tc_number(self) -> str:
+        return self.__tc_number
 
     def len(self) -> int:
         return len(self.__passengers)
