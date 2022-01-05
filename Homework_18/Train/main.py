@@ -14,3 +14,6 @@ if __name__ == "__main__":
     tr.add_traincars([traincar1, traincar3, traincar5])
     print(tr.len())
     print(traincar1.len())
+    print(traincar3.print_passengers_json())
+    print(traincar3.print_one_passenger_json(1))
+
