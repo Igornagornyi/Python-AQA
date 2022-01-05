@@ -32,8 +32,8 @@ class TrainCar:
         for value in self.__passengers:
             content += f"\tPassenger: {value},\n" \
                        f"\tWagon: {self.__tc_number},\n" \
-                       f"\tDestination: {self.__destination}\n\n"
-        return f"{start}{content}{end}"
+                       f"\tDestination: {self.__destination}\n"
+        return f"\n{start}{content}{end}\n"
 
     def print_one_passenger_json(self, index: int) -> Dict[str, str]:
         start = "[{\n"
@@ -42,4 +42,4 @@ class TrainCar:
         content += f"\tPassenger: {self.__passengers[index]},\n" \
                    f"\tWagon: {self.__tc_number},\n" \
                    f"\tDestination: {self.__destination}\n\n"
-        return f"{start}{content}{end}"
+        return f"\n{start}{content}{end}\n"
