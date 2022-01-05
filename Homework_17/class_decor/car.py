@@ -2,7 +2,7 @@ from car_modification import Modification
 from typing import Dict
 
 
-@Modification(["107", "310", "208"])
+@Modification(["automat", "climate control", "seats heating"])
 class Car:
     def __init__(self, name: str, year: int, color: str) -> None:
         self.__name = name
@@ -19,20 +19,12 @@ class Car:
         return my_dict
 
     @property
-    def modification_107(self):
-        return self.__modification[0]
-
-    @property
-    def modification_310(self):
-        return self.__modification[1]
-
-    @property
-    def modification_208(self):
-        return self.__modification[2]
+    def modification(self):
+        return self.__modifications
 
 
 if __name__ == '__main__':
     my_car = Car('Peugeot', 2013, 'white')
     print(my_car.json())
-    print(my_car.modification_107)
+    print(my_car.modification)
 
