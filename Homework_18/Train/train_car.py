@@ -22,9 +22,6 @@ class TrainCar:
     def add_passengers(self, passengers: List[str]) -> None:
         return self.__passengers.extend(passengers)
 
-    def __modify_key(self, key: str) -> str:
-        return key.replace(f"_{self.__class__.__name__}__", "")
-
     def print_passengers_json(self) -> Dict[str, str]:
         start = "[{\n"
         content = ""
