@@ -7,10 +7,8 @@ class Identification:
         self.__name = name
         self.__id_number = id_number
 
-    @property
-    def name(self) -> str:
+    def __name(self) -> str:
         return self.__name
 
-    @property
-    def id_number(self) -> int:
+    def __id_number(self) -> int:
         return self.__id_number
