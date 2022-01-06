@@ -1,4 +1,3 @@
-from __future__ import annotations
 from Homework_18.Factory.product import Product
 
 
