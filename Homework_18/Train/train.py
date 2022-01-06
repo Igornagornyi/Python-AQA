@@ -4,31 +4,29 @@ from typing import List
 
 class Train:
     def __init__(self) -> None:
-        self.__train_cars = []
+        self.__cars = []
         self.__name = 'Intercity'
         self.__destination = 'Kyiv'
 
-    def add_traincar(self, train_car: TrainCar) -> None:
-        return self.__train_cars.append(train_car.get_tc_number())
+    def add_traincar(self, car: TrainCar) -> None:
+        return self.__cars.append(car.get_number())
 
-    def add_traincars(self, train_cars: List[TrainCar]) -> List[int]:
-        for car in train_cars:
-            self.__train_cars.append(car.get_tc_number())
-        return self.__train_cars
+    def add_traincars(self, cars: List[TrainCar]) -> List[TrainCar]:
+        for car in cars:
+            self.__cars.append(car.get_number())
+        return self.__cars
 
-    def len(self) -> List[int]:
-        return self.__train_cars
+    def __len__(self) -> int:
+        return len(self.__cars)
 
-    def print_train(self) -> str:
-        item = 0
-        asc_result = ""
-        desc_result = ""
-        value_max = max(self.__train_cars)
-        value = max(self.__train_cars)
-        while item != value-1:
-            item += 1
-            asc_result += f"{[item]}-"
-        while value != 1:
-            value -= 1
-            desc_result += f"-{[value]}"
-        return f"<=[HEAD]-{asc_result}{[value_max]}{desc_result}"
+    def __str__(self) -> str:
+        asc_order = ""
+        desc_order = ""
+        max_number = max(self.__cars)
+        sorted_cars = sorted(self.__cars)
+        reversed_cars = sorted(self.__cars, reverse=True)
+        for item in sorted_cars[0:-1]:
+            asc_order += f"{[item]}-"
+        for rev_item in reversed_cars[1:len(reversed_cars)]:
+            desc_order += f"-{[rev_item]}"
+        return f"<=[HEAD]-{asc_order}{[max_number]}{desc_order}"
