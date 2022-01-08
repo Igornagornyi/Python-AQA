@@ -7,27 +7,19 @@ from product import Product
 
 class Market:
     @staticmethod
-    def get_product(prod_color: str, prod_shape: str, prod_size: str) -> Product:
+    def get_product(values) -> Product:
         """Return product name by attributes"""
         apple = Apple()
         bannana = Bannana()
         cellery = Cellery()
         strawberry = Strawberry()
-        if prod_color.lower() in apple.color \
-                and prod_shape.lower() in apple.shape \
-                and prod_size.lower() in apple.size:
+        if all([value in apple.attributes for value in values]):
             return Apple()
-        elif prod_color.lower() in bannana.color \
-                and prod_shape.lower() in bannana.shape \
-                and prod_size.lower() in bannana.size:
+        elif all([value in bannana.attributes for value in values]):
             return Bannana()
-        elif prod_color.lower() in cellery.color \
-                and prod_shape.lower() in cellery.shape \
-                and prod_size.lower() in cellery.size:
+        elif all([value in cellery.attributes for value in values]):
             return Cellery()
-        elif prod_color.lower() in strawberry.color\
-                and prod_shape.lower() in strawberry.shape\
-                and prod_size.lower() in strawberry.size:
+        elif all([value in strawberry.attributes for value in values]):
             return Strawberry()
         else:
             raise Exception("Undefined product")
