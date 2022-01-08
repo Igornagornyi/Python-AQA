@@ -9,17 +9,13 @@ class Market:
     @staticmethod
     def get_product(values) -> Product:
         """Return product name by attributes"""
-        apple = Apple()
-        bannana = Bannana()
-        cellery = Cellery()
-        strawberry = Strawberry()
-        if all([value in apple.attributes for value in values]):
+        if all([value in Apple().attributes for value in values]):
             return Apple()
-        elif all([value in bannana.attributes for value in values]):
+        elif all([value in Bannana().attributes for value in values]):
             return Bannana()
-        elif all([value in cellery.attributes for value in values]):
+        elif all([value in Cellery().attributes for value in values]):
             return Cellery()
-        elif all([value in strawberry.attributes for value in values]):
+        elif all([value in Strawberry().attributes for value in values]):
             return Strawberry()
         else:
             raise Exception("Undefined product")
