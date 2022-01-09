@@ -9,17 +9,12 @@ class Train:
         self.__destination = 'Kyiv'
 
     def add_traincar(self, car: List[TrainCar]) -> List[str]:
-        object_list = [str(car)]
-        for item in object_list:
-            self.__cars.append(item.split()[-1][0:-2])
+        self.__cars.append(str(car).split()[-1][0:-2])
         return self.__cars
 
     def add_traincars(self, cars: List[List[TrainCar]]) -> List[str]:
-        object_list = []
         for car in cars:
-            object_list.append(str(car))
-        for car in object_list:
-            self.__cars.append(car.split()[-1][0:-2])
+            self.__cars.append(str(car).split()[-1][0:-2])
         return self.__cars
 
     def __len__(self) -> int:
