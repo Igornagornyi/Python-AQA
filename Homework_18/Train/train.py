@@ -8,22 +8,25 @@ class Train:
         self.__name = 'Intercity'
         self.__destination = 'Kyiv'
 
-    def add_traincar(self, car: TrainCar) -> None:
-        return self.__cars.append(car)
+    def add_traincar(self, car: List[TrainCar]) -> List[str]:
+        object_list = [str(car)]
+        for item in object_list:
+            self.__cars.append(item.split()[-1][0:-2])
+        return self.__cars
 
-    def add_traincars(self, cars: List[TrainCar]) -> List[TrainCar]:
+    def add_traincars(self, cars: List[List[TrainCar]]) -> List[str]:
+        object_list = []
         for car in cars:
-            self.__cars.append(car)
+            object_list.append(str(car))
+        for car in object_list:
+            self.__cars.append(car.split()[-1][0:-2])
         return self.__cars
 
     def __len__(self) -> int:
         return len(self.__cars)
 
     def __str__(self) -> str:
-        right_order = ""
-        reverse_order = ""
-        for car in self.__cars[0:-1]:
-            right_order += f"{[car]}-"
-        for reverse_car in reversed(self.__cars):
-            reverse_order += f"-{[reverse_car]}"
-        return f"<=[HEAD]-{right_order}{reverse_order}"
+        order = ""
+        for car in self.__cars[0:len(self.__cars)]:
+            order += f"{[car]}"
+        return f"<=[HEAD]-{order}"
