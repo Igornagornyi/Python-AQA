@@ -16,3 +16,7 @@ def test_check_value_for_grow_method(human_european):
 
 def test_check_value_for_change_name_method(human_asian):
     assert human_asian.change_name("Lee") == "Lee"
+
+
+def test_check_value_for_change_gender_method(human_afroamerican):
+    assert human_afroamerican.change_gender("female") == "female"

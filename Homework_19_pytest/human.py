@@ -1,4 +1,4 @@
-from Homework_19.race import Race
+from Homework_19_pytest.race import Race
 
 
 class Human:
@@ -37,5 +37,6 @@ class Human:
         else:
             raise Exception("Provided name is the same...")
 
-    def change_gender(self, gender: str) -> None:
+    def change_gender(self, gender: str) -> str:
         self.__gender = self.__validate_gender(gender)
+        return self.__gender

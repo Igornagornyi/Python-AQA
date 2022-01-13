@@ -1,7 +1,7 @@
 import pytest
 
-from Homework_19.human import Human
-from Homework_19.race import Race
+from Homework_19_pytest.human import Human
+from Homework_19_pytest.race import Race
 
 
 @pytest.fixture
@@ -33,11 +33,5 @@ def human_afroamerican(afroamerican) -> Human:
 
 @pytest.fixture
 def human_european(european) -> Human:
-    human = Human("Elizabeth", 40, "female", european)
-    yield human
-
-
-@pytest.fixture
-def human_age(european) -> Human:
     human = Human("Elizabeth", 40, "female", european)
     yield human
