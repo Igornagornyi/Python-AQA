@@ -1,0 +1,18 @@
+def test_check_return_value_for_name_property(human_asian):
+    assert human_asian.name == "George"
+
+
+def test_check_return_value_for_age_property(human_afroamerican):
+    assert human_afroamerican.age == 23
+
+
+def test_check_return_value_for_gender_property(human_european):
+    assert human_european.gender == "female"
+
+
+def test_check_value_for_grow_method(human_european):
+    assert human_european.grow() == 41
+
+
+def test_check_value_for_change_name_method(human_asian):
+    assert human_asian.change_name("Lee") == "Lee"
