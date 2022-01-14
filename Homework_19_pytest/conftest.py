@@ -6,32 +6,34 @@ from Homework_19_pytest.race import Race
 
 @pytest.fixture
 def asian() -> Race:
-    yield Race("asian")
+    return Race("asian")
 
 
 @pytest.fixture
 def afroamerican() -> Race:
-    yield Race("afroamerican")
+    return Race("afroamerican")
 
 
 @pytest.fixture
 def european() -> Race:
-    yield Race("european")
+    return Race("european")
 
 
 @pytest.fixture
 def human_asian(asian) -> Human:
     human = Human("George", 18, "male", asian)
+    print("text from fixture setup")
     yield human
+    print("here could be additional instructions from fixture teardown")
 
 
 @pytest.fixture
 def human_afroamerican(afroamerican) -> Human:
     human = Human("John", 23, "male", afroamerican)
-    yield human
+    return human
 
 
 @pytest.fixture
 def human_european(european) -> Human:
     human = Human("Elizabeth", 40, "female", european)
-    yield human
+    return human
