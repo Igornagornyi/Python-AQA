@@ -20,6 +20,10 @@ class Human:
     def gender(self) -> str:
         return self.__gender
 
+    @property
+    def race(self) -> Race:
+        return self.__race
+
     def __validate_gender(self, gender: str) -> str:
         if gender not in ["male", "female"]:
             raise Exception("Unknown gender")
