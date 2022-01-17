@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from time import sleep
 
+
 driver = Chrome("./chromedriver")
 driver.get("https://www.motorsport.com/")
 driver.maximize_window()
