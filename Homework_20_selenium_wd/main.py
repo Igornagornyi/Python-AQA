@@ -24,5 +24,7 @@ search_field: WebElement = driver.find_element(
 search_field.send_keys("Formula")
 sleep(5)
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-sleep(2)
+sleep(5)
+driver.execute_script("window.scrollTo(0, document.body.ScrollTop)")
+sleep(5)
 driver.quit()
