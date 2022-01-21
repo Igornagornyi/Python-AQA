@@ -4,7 +4,7 @@ from selenium.webdriver.remote.webelement import WebElement
 from time import sleep
 
 
-driver = Chrome("./chromedriver")
+driver = Chrome("chromedriver")
 driver.get("https://www.motorsport.com/")
 driver.maximize_window()
 news_button: WebElement = driver.find_element(
