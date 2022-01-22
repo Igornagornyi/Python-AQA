@@ -1,4 +1,4 @@
-Designing Selenium WebDriver Framework with Pytest on functional Approach
+<strong>Designing Selenium WebDriver Framework with Pytest on functional Approach </strong>
 
 1.Structure of project
 
