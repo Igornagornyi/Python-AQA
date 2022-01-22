@@ -11,6 +11,7 @@ class Homepage(Basepage):
             "//div[@class='ms-footer_top-start']//a[contains(text(), 'Subscribe to our newsletter')]"
 
     def check_subscribe_item_title(self) -> str:
+        self._scroll_to_the_element(self.__subscribe_button_locator)
         return self._driver.find_element_by_xpath(self.__subscribe_button_locator).text
 
     def select_news(self) -> Newspage:
