@@ -8,7 +8,6 @@ class Newspage(Basepage):
         self.__filter_button = "//div[@class='ms-filter_toggler']"
         self.__search_field = "//input[@class='ms-filter-search_input']"
         self.__search_field_result = "//div[@class='ms-filter-option']/span[1]"
-        self.__search_result_wrapper = "//div[@class='ms-filter-search-result-wrapper']"
 
     def __search_field_write_text(self) -> None:
         self._click_on_element(self.__filter_button)
