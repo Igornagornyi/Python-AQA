@@ -12,12 +12,9 @@ def xml_parse():
             my_movies.append(decade.attrib["years"])
             for movie in decade.findall("movie"):
                 my_movies.append(movie.attrib["title"])
-                for format in movie.findall("format"):
-                    my_movies.append(format.text)
-                    for year in movie.findall("year"):
-                        my_movies.append(int(year.text))
-                        for rating in movie.findall("rating"):
-                            my_movies.append(rating.text)
-                            for description in movie.findall("description"):
-                                my_movies.append([description.text.strip()])
+                my_movies.append(movie[0].text)
+                my_movies.append(movie[1].text)
+                my_movies.append(movie[2].text)
+                my_movies.append(movie[3].text.strip())
+
     return my_movies
