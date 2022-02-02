@@ -20,4 +20,4 @@ def xml_parse():
                             my_movies.append(rating.text)
                             for description in movie.findall("description"):
                                 my_movies.append([description.text.strip()])
-        return my_movies
+    return my_movies
