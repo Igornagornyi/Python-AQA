@@ -9,3 +9,4 @@ class ProductRepository(BaseRepository):
     def get_products(self) -> List[Products]:
         products = self.session.query(Products).all()
         return products
+

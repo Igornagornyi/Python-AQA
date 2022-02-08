@@ -14,4 +14,4 @@ class BaseRepository(Singleton):
         self.__engine = create_engine(f"{self.__config.driver_name}://{self.__config.user}:"
                                       f"{self.__config.password}@{self.__config.host}:"
                                       f"{self.__config.port}/{self.__config.database}")
-        self.session: Session = sessionmaker(self.__engine)()
+        self.session: Session = sessionmaker(self.__engine, autocommit=True)()
