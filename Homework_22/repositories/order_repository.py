@@ -10,9 +10,8 @@ class OrderRepository(BaseRepository):
         orders = self.session.query(Orders).all()
         return orders
 
-    def add_order(self, data) -> None:
-        orders = Orders(**data)
-        self.session.add(orders)
+    def add_orders(self, *args) -> None:
+        self.session.add_all(args)
 
     def change_quantity(self, id: int, quantity: int) -> None:
         self.session.query(Orders).filter(Orders.id == id).update({"quantity": quantity})
